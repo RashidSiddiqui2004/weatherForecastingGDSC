@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        .smart-green{
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 500px;
+            background: white;
+
+            padding: 30px 30px 20px 30px;
+            font: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #4e179cb4;
+
+            border-radius: 5px;
+        }
+
+        .smart-green h1{
+            font-size : 36px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px 0 20px 40px;
+            display: block;
+            color:white;
+            margin: -30px -30px 10px -30px;
+            text-shadow: 1px 1px 1px #c10606bc;
+            background:#4e179cb4;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .smart-green h1>span{
+            
+            display: block;
+            font-size: 16px;
+            color: blanchedalmond;
+
+        }
+
+        .smart-green label{
+            display: block;
+            margin: 0px 0px 5px;
+        }
+
+        .smart-green label>span{
+            float: left;
+            margin-top: 10px;
+            color: rgba(163, 8, 197, 0.748);
+        }
+
+        .smart-green input{
+
+            color: rgb(193, 13, 13);
+            height: 30px;
+            line-height: 15px;
+
+            width: 100%;
+            border: 1px solid whitesmoke;
+
+            background: white;
+
+            box-shadow: inset 1px 1px 2px rgba(89, 23, 196, 0.613);
+        }
+
+        .smart-green textarea{
+            height: 100px;
+            padding-top: 10px;
+        }
+
+        .smart-green select{
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            text-indent: 0.01px;
+            text-overflow: '';
+            height: 30px;
+            width: 100%;
+        }
+
+        .smart-green .button{
+            background-color: rgba(24, 212, 187, 0.788);
+            border-radius: 5px;
+
+            color: aliceblue;
+            text-shadow: 1px 1px 1px #ffffffbc;
+            padding: 10px 25px 10px 25px;
+            -webkit-border-radius: 5px ;
+            -webkit-border-border-radius: 5px;
+        }
+
+        .smart-green .button:hover{
+            background-color: rgba(131, 205, 21, 0.613);
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" method="post" class="smart-green">
+
+        <h1>Contact Form<span>
+                Please fill all the texts in the fields.
+            </span></h1>
+
+        <label>
+            <span>Your name :</span>
+            <input id="name" type="text" name="name" placeholder="Your full name" />
+        </label>
+
+        <label>
+            <span>Your email :</span>
+            <input id="email" type="text" name="email" placeholder="Your Email Address" />
+        </label>
+
+        <label>
+            <span>Message :</span>
+
+            <textarea name="message" id="message" placeholder="Your message to Us"></textarea>
+        </label>
+
+
+        <label>
+            <span>Subject :</span> <select name="selection">
+
+                <option value="Job Inquiry"> Job Inquiry</option>
+                <option value="General Query">General Query</option>
+            </select>
+        </label>
+
+            <label>
+                <span></span>
+
+                <input type="button" class="button" value="Send">
+            </label>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Locations weather</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="large">
+        <div class="logo">
+            <div class="grid">
+                <div class="row">
+
+                    <div class="col-sm ">
+                        <h2 style="color: brown; display: flex;">
+                            Clear Cloud</h2>
+                        <span style="display: flex;">-IntelliNature</span>
+
+                        <img src="images/i8.jpg" alt="logo" style="width: 5%; display: flex;">
+
+                        <!-- <p id="head1">
+                            Welcome to the weather forecasting website
+                        </p> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+
+            <a href="fiveDays.html" target="_blank"> 6- Days Forecast </a>
+
+            <div class="dropdown">
+                <button class="dropbtn" style="color: black;">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Celcius</a>
+                    <a href="fahrenheitPage.html" target="_blank">Fahrenheit</a>
+                    <!-- <a href="#">Link 3</a> -->
+                </div>
+            </div>
+
+            <a href="#about">About</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <section>
+
+
+            <!-- input tag -->
+            <input id="searchbar" onkeyup="search_Places()" type="text" name="search" placeholder="Search Locations..">
+
+            <!-- ordered list -->
+            <ol id='list'>
+                <li class="places"><a href="NewDelhi.html" target="_blank">New Delhi</a></li>
+                <li class="places"><a href="NewDelhi.html" target="_blank">Mumbai</a></li>
+                <li class="places"><a href="NewDelhi.html" target="_blank">Bengaluru</a> </li>
+                <li class="places"><a href="NewDelhi.html" target="_blank">Uttar Pradesh</a></li>
+                <li class="places"><a href="NewDelhi.html" target="_blank">Kolkata</a> </li>
+                <li class="places"><a href="NewDelhi.html" target="_blank">New York</a></li>
+                <li class="places"><a href="NewDelhi.html" target="_blank">Paris </a></li>
+            </ol>
+
+        </section>
+     
+            <h2 style="border: 4px; text-decoration: underline; text-align: center; color: rgba(223, 74, 20, 0.829); 
+            margin-bottom: 15px;margin-top: 15px;">New York Weather Report</h2>
+        <div class="grid">
+            <div class="row">
+                <div class="forecast" style="height: 285px;">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb <span id="currDate1"></span></div>
+                            <div class="temperature"><strong> <span id="t1"></span> °C</strong> | <span
+                                    id="t2"></span>°C</div>
+                            <div class="windspeed">Wind :SE <img class="wind-arrow" src="images\wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /><span id="w1"></span> km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="images\clear.jpg" style="height: 80px;"
+                                alt="almost clear and no rain; style:float">
+
+                            <div class="text">
+                                <p>Almost clear and no rain
+                                    <br>
+                                    <br> Nice weather for a trip..
+                                </p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer; width: 40%">extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb <span id="currDate2"></span></div>
+                            <div class="temperature"><strong><span id="t3"></span>°C</strong> | <span id="t4"></span> °C
+                            </div>
+                            <div class="windspeed">Wind :SE <img class="wind-arrow" src="images\wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /> <span id="w2"></span>km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="images\lowrain.jpg" style="height: 80px;" alt="Clear and low rain; style:float">
+
+                            <div class="text">
+                                <p>Clear and low rain
+                                    <br>
+                                    Carry an umbrella for safety.
+                                </p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer; width: 40%">extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb <span id="currDate3"></span> </div>
+                            <div class="temperature"><strong><span id="t5"></span>°C</strong> | <span id="t6"></span>°C
+                            </div>
+                            <div class="windspeed">Wind :NE <img class="wind-arrow" src="/images/wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /> <span id="w3"></span> km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="images\heavyRain.jpg" style="height: 80px;"
+                                alt="almost clear and no rain; style:float">
+
+                            <div class="text">
+                                <p>Heavy Rainfall
+                                    <br>Avoid going outside unless necessary..
+                                </p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer; width: 40%"> extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="forecast">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb <span id="currDate4"></span></div>
+                            <div class="temperature"><strong><span id="t7"></span>°C</strong> | <span id="t8"></span>°C
+                            </div>
+                            <div class="windspeed">Wind :SE <img class="wind-arrow" src="images\wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /> <span id="w4"></span> km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="images\clear.jpg" style="height: 80px;"
+                                alt="almost clear and no rain; style:float">
+
+                            <div class="text">
+                                <p>Almost clear and no rain</p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer; width: 40%">extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast" style="width: 30%;">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb <span id="currDate5"></span></div>
+                            <div class="temperature"><strong><span id="t9"></span>°C</strong> | <span id="t10"></span>°C
+                            </div>
+                            <div class="windspeed">Wind :SE <img class="wind-arrow" src="images\wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /> <span id="w5"></span> km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="images\clouds.jpg" style="height: 60px;"
+                                alt="almost clear and no rain; style:float">
+
+                            <div class="text">
+                                <p>Broken Clouds <br><br>
+                                    Plz carry an umbrella:)</p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer;width: 40%">extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forward" style="width: 30%;">
+                    <div class="title">
+                        <p>
+                            More local weather forecasts <br>
+                            We got you covered
+                        </p>
+                    </div>
+
+                    <div class="btn">
+                        <button>
+                            10-Days Weather Forecast
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="help">
+            <img src="images\mark.jpg" alt="Q.Mark" style="width: 35px; float: inline-start; margin-left: 25px;">
+
+            <a href="#" style="font-size: medium; color: rgba(228, 27, 94, 0.925); text-align: center;">Need some
+                help</a>
+        </div>
+
+
+        <section>
+            <div class="feedback">
+                <h4>How was your experience?</h4>
+
+                <button style="height: 30px;" class="btn1">Good</button>
+                <button style="height: 30px;" class="btn1">Moderate</button>
+
+                <div class="hello" style="margin-left: 700px;">
+                    <img src="images\email.jpg" alt="E-mail" style="height: 30px;">
+                    <a href="contact.html" style="height: 15px; background-color: aqua;
+                    font-family: cursive; font-size: medium" target="_blank">Contact Us</a>
+
+                </div>
+
+            </div>
+
+        </section>
+        <br>
+        <div class="grid2" style="display: flex;">
+            <div class="support" style="display: flex; margin-top: 5px;
+             margin-bottom: 5px; width: 50%;border: 2px; border-radius: 5px;">
+
+                <img src="images\support.jpg" alt="someImage">
+
+                <div>
+                    <p style="float: left; ">Love Our Site? Become a Supporter</p>
+                    <br>
+                    <br>
+                    <ul>
+
+                        <li>Browse our site advert free.</li>
+                        <li>Sun & Moon times precise to the second.</li>
+                        <li>Exclusive calendar templates for PDF Calendar.</li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="legalPolicy" style="display: flex; margin-top: 5px; margin-bottom: 5px; width: 50%;">
+
+                <div>
+                    <h3>Company</h3>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Careers/Jobs</li>
+                        <li>SiteMap</li>
+                        <li> Newsletter</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Legal</h3>
+
+                    <ul>
+                        <li>Work policy</li>
+                        <li>Disclaimer</li>
+                        <li>Advertising</li>
+                        <li> Privacy policy</li>
+                        <li> Terms & Conditions </li>
+                    </ul>
+
+                </div>
+
+                <div>
+                    <h3>Services</h3>
+
+                    <ul>
+                        <!-- <a href="Clock.html" target="_blank" style="text-decoration: none;"></a> -->
+                        <li> World Clock</li>
+                        <li>Calendar</li>
+                        <li>Calculator</li>
+                        <li>Timers</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+        <footer class="container"
+            style="height: 10px; margin-top: 10px; margin-bottom: 20px; color: hsla(33, 80%, 6%, 0.893);">
+            <p class="float right">@iWeather 2022 Inc. <a href='#'>Terms </a>.<a href='#'>Conditions </a></p>
+        </footer>
+
+    <script src="app1.js"></script>
+</body>
+</html>

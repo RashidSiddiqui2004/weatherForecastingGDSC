@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fahrenheit Weather </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="util.css">
+
+    <style>
+        .smart-green {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 500px;
+            background: white;
+
+            padding: 30px 30px 20px 30px;
+            font: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #4e179cb4;
+
+            border-radius: 5px;
+        }
+
+        .smart-green h1 {
+            font-size: 36px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px 0 20px 40px;
+            display: block;
+            color: white;
+            margin: -30px -30px 10px -30px;
+            text-shadow: 1px 1px 1px #c10606bc;
+            background: #4e179cb4;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .smart-green h1>span {
+
+            display: block;
+            font-size: 16px;
+            color: blanchedalmond;
+
+        }
+
+        .smart-green label {
+            display: block;
+            margin: 0px 0px 5px;
+        }
+
+        .smart-green label>span {
+            float: left;
+            margin-top: 10px;
+            color: rgba(163, 8, 197, 0.748);
+        }
+
+        .smart-green input {
+
+            color: rgb(193, 13, 13);
+            height: 30px;
+            line-height: 15px;
+
+            width: 100%;
+            border: 1px solid whitesmoke;
+
+            background: white;
+
+            box-shadow: inset 1px 1px 2px rgba(89, 23, 196, 0.613);
+        }
+
+        .smart-green textarea {
+            height: 100px;
+            padding-top: 10px;
+        }
+
+        .smart-green select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            text-indent: 0.01px;
+            text-overflow: '';
+            height: 30px;
+            width: 100%;
+        }
+
+        .smart-green .button {
+            background-color: rgba(24, 212, 187, 0.788);
+            border-radius: 5px;
+
+            color: aliceblue;
+            text-shadow: 1px 1px 1px #ffffffbc;
+            padding: 10px 25px 10px 25px;
+            -webkit-border-radius: 5px;
+            -webkit-border-border-radius: 5px;
+        }
+
+        .smart-green .button:hover {
+            background-color: rgba(131, 205, 21, 0.613);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="large">
+        <div class="logo">
+            <div class="grid">
+                <div class="row">
+
+                    <div class="col-sm ">
+                        <h2
+                            style="color: brown; font-weight: 500 ; font-family: 'Lucida Sans',
+                             'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;display: flex;">
+                            Clear Cloud</h2>
+                        <h3 style="display: flex;">-IntelliNature</h3>
+
+                        <img src="images/i8.jpg" alt="logo" style="width: 5%;">
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+
+            <a href="fiveDays.html" target="_blank"> 5- Days Forecast </a>
+             
+            <div class="dropdown">
+                <button class="dropbtn" style="color: black;">Dropdown
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="index.html" target="_blank">Celcius</a>
+                  <a href="#">Fahrenheit</a>
+                  <!-- <a href="#">Link 3</a> -->
+                </div>
+              </div>
+            
+            <a href="#about">About</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+ 
+        <section>
+
+            <p id="head1">
+                Welcome to my weather forecating app
+            </p>
+
+        </section>
+        <div class="slideshow-container" style="height: 40%;">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="images\i2.jpg" style="width:100% ; height: 40%;">
+                <div class="text1">Our Beautiful Nature</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="images\i3.jpg" style="width:100% ; height: 40%;">
+                <div class="text1">Climate and Weather</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="images\i4.jpg" style="width:100% ; height: 40%;">
+                <div class="text1">Don't underestimate the power of nature</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="images\i5.jpg" style="width:100% ; height: 40%;">
+                <div class="text1"> Different faces of Nature</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+
+        <br><br><br>
+
+        <div class="grid">
+            <div class="row">
+                <div class="forecast" style="width: 30%;">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb 16</div>
+                            <div class="temperature"><strong>82°F</strong> | 70°F</div>
+                            <div class="windspeed">Wind :SE <img class="wind-arrow" src="/images/wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /> 11 km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="/images/clear.jpg" style="height: 60px;"
+                                alt="almost clear and no rain; style:float">
+
+                            <div class="text">
+                                <p>almost clear and no rain</p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer; width: 40%">extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast" style="width: 30%;">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb 17</div>
+                            <div class="temperature"><strong>80°F</strong> | 73°F</div>
+                            <div class="windspeed">Wind :SE <img class="wind-arrow" src="/images/wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /> 15 km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="/images/lowrain.jpg" style="height: 60px;"
+                                alt="almost clear and no rain; style:float">
+
+                            <div class="text">
+                                <p>Clear and low rain</p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer; width: 40%">extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast" style="width: 30%;">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb 18</div>
+                            <div class="temperature"><strong>78°F</strong> | 79°F</div>
+                            <div class="windspeed">Wind :NE <img class="wind-arrow" src="/images/wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /> 8 km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="images\heavyRain.jpg" style="height: 60px;"
+                                alt="almost clear and no rain; style:float">
+
+                            <div class="text">
+                                <p>Heavy Rainfall</p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer; width: 40%"> extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="forecast" style="width: 30%;">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb 10</div>
+                            <div class="temperature"><strong>78°F</strong> | 65°F</div>
+                            <div class="windspeed">Wind :SE <img class="wind-arrow" src="/images/wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /> 11 km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="/images/clear.jpg" style="height: 60px;"
+                                alt="almost clear and no rain; style:float">
+
+                            <div class="text">
+                                <p>almost clear and no rain</p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer; width: 40%">extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast" style="width: 30%;">
+                    <div>
+                        <div class="meta">
+                            <div class="date"><strong>Fri</strong> Feb 11</div>
+                            <div class="temperature"><strong>82°F</strong> | 75°F</div>
+                            <div class="windspeed">Wind :SE <img class="wind-arrow" src="/images/wind.jpg"
+                                    style="transform: rotate(129deg); width: 15px;" /> 15 km/h</div>
+                            <div class="rain"></div>
+                        </div>
+
+                        <div class="details">
+                            <img src="/images/lowrain.jpg" style="height: 60px;"
+                                alt="almost clear and no rain; style:float">
+
+                            <div class="text">
+                                <p>Clear and low rain</p>
+
+                                <div class="hourly-link">
+                                    <button href="https://weather-and-climate.com/5-day-hourly-forecast,New-Delhi,India"
+                                        style="cursor: pointer;width: 40%">extended
+                                        forecast</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forward" style="width: 30%;">
+                    <div class="title">
+                        <p>
+                            More local weather forecasts <br>
+                            We got you covered
+                        </p>
+                    </div>
+
+                    <div class="btn">
+                        <button>
+                            10-Days Weather Forecast
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            style="text-align: justify; border: 2px dotted rgba(145, 37, 98, 0.855); border-radius: 4px ; font-family:cursive">
+            <p>Weather is the day-to-day state of atmosphere and pertains to short term changes in conditions of heat,
+                moisture and air movement. Weather results from processes that attempt to equalise the differences in
+                the
+                distribution of net radiant energy from sun. In other words, the instantaneous state of atmosphere can
+                be
+                called as weather. It is usually expressed as fine, fair, foggy, cloudy, rainy, sunny or windy weather.
+
+                The process of exchange of heat and moisture between earth and atmosphere over a long period of time
+                (month,
+                season, and year) related to large areas (zone, state, country, continent) results in conditions what we
+                call climate.
+
+                It is aggregate of atmospheric conditions involving heat, moisture and air movement. In other words, the
+                totality of weather over a large area is known as climate. It is expressed as marine, continental, arid,
+                semiarid, humid or desert climate.</p>
+
+            <p>Weather refers to the sum total of the atmos­pheric conditions in terms of temperature, pressure, wind,
+                moisture, cloudiness, precipitation and visibility of a particular place at any given time. In fact,
+                weather denotes short-term variations of atmospheric condi­tions and it is highly variable.
+
+                On the other hand, climate is defined as aggregate weather conditions of any region in long-term
+                perspective. According to Trewartha ‘climate represents a composite of day to day weather conditions,
+                and of the atmospheric ele­ments, within a specified area over a long period of time.’ According to
+                Critchfield ‘climate is more than a statistical average; it is the aggregate of atmospheric conditions
+                involving heat, moisture, and air move­ment. Extremes must always be considered in any climatic
+                description in addition to means, trends, and probabilities.’
+                <br>
+
+                According to Koeppen and De Long ‘climate is a summary, a composite of weather condi­tions over a long
+                period of time; truly portrayed, it includes details of variations-extremes, frequencies, sequences-of
+                the weather elements which occur from year to year, particularly in temperature and precipita­tion.
+                Climate is the aggregate of the weather.’
+            </p>
+        </div>
+
+        <br><br>
+        <hr>
+
+        <form action="" method="post" class="smart-green">
+
+            <h1>Contact Form<span>
+                    Please fill all the texts in the fields.
+                </span></h1>
+
+            <label>
+                <span>Your name :</span>
+                <input id="name" type="text" name="name" placeholder="Your full name" />
+            </label>
+
+            <label>
+                <span>Your email :</span>
+                <input id="email" type="text" name="email" placeholder="Your Email Address" />
+            </label>
+
+            <label>
+                <span>Message :</span>
+
+                <textarea name="message" id="message" placeholder="Your message to Us"></textarea>
+            </label>
+
+
+            <label>
+                <span>Subject :</span> <select name="selection">
+
+                    <option value="Job Inquiry"> Job Inquiry</option>
+                    <option value="General Query">General Query</option>
+                </select>
+            </label>
+
+            <label>
+                <span></span>
+
+                <input type="button" class="button" value="Send">
+            </label>
+        </form>
+
+        <br>
+
+        <div class="help">
+            <img src="images\mark.jpg" alt="Q.Mark" style="width: 35px; float: inline-start; margin-left: 25px;">
+
+            <a href="#" style="font-size: medium; color: rgba(228, 27, 94, 0.925); text-align: center;">Need some
+                help</a>
+        </div>
+
+        <section>
+            <div class="feedback">
+                <h4>How was your experience?</h4>
+
+                <button>Good</button>
+                <button>Bad</button>
+
+                <div class="hello" style="margin-left: 700px;">
+                    <img src="images\email.jpg" alt="E-mail" style="height: 30px;">
+                    <button>Contact Us</button>
+
+                </div>
+
+            </div>
+
+        </section>
+        <br>
+        <div class="grid2" style="display: flex;">
+            <div class="support" style="display: flex; margin-top: 5px;
+             margin-bottom: 5px; width: 50%;border: 2px; border-radius: 5px;">
+
+                <img src="images\support.jpg" alt="someImage">
+
+                <div>
+                    <p style="float: left; ">Love Our Site? Become a Supporter</p>
+                    <br>
+                    <br>
+                    <ul>
+
+                        <li>Browse our site advert free.</li>
+                        <li>Sun & Moon times precise to the second.</li>
+                        <li>Exclusive calendar templates for PDF Calendar.</li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="legalPolicy" style="display: flex; margin-top: 5px; margin-bottom: 5px; width: 50%;">
+
+                <div>
+                    <h3>Company</h3>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Careers/Jobs</li>
+                        <li>SiteMap</li>
+                        <li> Newsletter</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Legal</h3>
+
+                    <ul>
+                        <li>Work policy</li>
+                        <li>Disclaimer</li>
+                        <li>Advertising</li>
+                        <li> Privacy policy</li>
+                        <li> Terms & Conditions </li>
+                    </ul>
+
+                </div>
+
+                <div>
+                    <h3>Services</h3>
+
+                    <ul>
+
+                        <li><a href="Clock.html" target="_blank" style="text-decoration: none;"> World Clock</a></li>
+                        <li>Calendar</li>
+                        <li>Calculator</li>
+                        <li>Timers</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+        <footer class="container" style="height: 10px; margin-top: 10px; margin-bottom: 10px;">
+            <p class="float right">@iWeather 2017 Inc. <a href='#'>Terms </a>.<a href='#'>Conditions </a></p>
+        </footer>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+        <script src="app.js"></script>
+
+        <script>
+
+            AOS.init({
+                offset: 50,
+                duration: 1600,
+                delay: 0,
+            });
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+/* Reset default styles */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, a, span, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+/* Set the default font family and font size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Set a background color */
+body {
+    background-color: #f9f9f9;
+}
+
+/* Headings styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Link styles */
+a {
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0b7dda;
+}
+
+/* List styles */
+ul, ol {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Header styles */
+header {
+    background-color: #0b7dda;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* Button styles */
+.btn {
+    background-color: #0b7dda;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+/* Section styles */
+section {
+    padding: 60px 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+}
